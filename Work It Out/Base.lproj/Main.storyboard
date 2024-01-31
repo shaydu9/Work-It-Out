@@ -1,24 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Guk-kD-ha9">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Work_It_Out" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xaa-hK-g25">
+                                <rect key="frame" x="20" y="123" width="353" height="709"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xF7-9x-P2o">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="223"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="icons8-cyclist-80" imagePlacement="top" title="Cycling" imagePadding="15" cornerStyle="medium"/>
+                                        <connections>
+                                            <action selector="sportTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wEM-dV-AfR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="194-XO-kj1">
+                                        <rect key="frame" x="0.0" y="243" width="353" height="223"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="icons8-running-80" imagePlacement="top" title="Running" imagePadding="15" cornerStyle="medium"/>
+                                        <connections>
+                                            <action selector="sportTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KUf-NA-udh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2k-RH-DKQ">
+                                        <rect key="frame" x="0.0" y="486" width="353" height="223"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="icons8-swimming-80" imagePlacement="top" title="Swimming" imagePadding="15" cornerStyle="medium"/>
+                                        <connections>
+                                            <action selector="sportTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="csc-F1-2Py"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xaa-hK-g25" secondAttribute="trailing" constant="20" id="LU8-7m-BBx"/>
+                            <constraint firstItem="xaa-hK-g25" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ahW-Dp-bxW"/>
+                            <constraint firstItem="xaa-hK-g25" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="cgO-iM-iyk"/>
+                            <constraint firstAttribute="bottom" secondItem="xaa-hK-g25" secondAttribute="bottom" constant="20" id="sVe-hI-xAK"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dsv-1p-gG4"/>
+                    <connections>
+                        <segue destination="gPA-ie-ztF" kind="show" identifier="workoutSegue" id="Sv3-LB-cuT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1052.6717557251909" y="4.9295774647887329"/>
+        </scene>
+        <!--WorkoutVC-->
+        <scene sceneID="rH7-FQ-03d">
+            <objects>
+                <viewController id="gPA-ie-ztF" customClass="WorkoutVC" customModule="Work_It_Out" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Mv-mJ-bYd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SA0-wi-alT">
+                                <rect key="frame" x="125" y="409" width="144" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Create Workout" cornerStyle="medium"/>
+                                <connections>
+                                    <action selector="workoutButtonTapped:" destination="gPA-ie-ztF" eventType="touchUpInside" id="2u7-X7-uN8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="git-ch-OqU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EsV-Nr-K0V"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Zu-xy-U6b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1863.3587786259541" y="4.9295774647887329"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IUB-nd-1bI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Guk-kD-ha9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5RS-fr-QHg">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8it-Uc-gKo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kub-fa-vqq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.95419847328243" y="4.9295774647887329"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-cyclist-80" width="80" height="80"/>
+        <image name="icons8-running-80" width="80" height="80"/>
+        <image name="icons8-swimming-80" width="80" height="80"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

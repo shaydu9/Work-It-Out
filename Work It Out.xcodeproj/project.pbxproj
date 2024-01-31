@@ -14,6 +14,8 @@
 		4E52E8DC2B6A89E0004FE999 /* Work_It_Out.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E52E8DA2B6A89E0004FE999 /* Work_It_Out.xcdatamodeld */; };
 		4E52E8DE2B6A89F3004FE999 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E52E8DD2B6A89F3004FE999 /* Assets.xcassets */; };
 		4E52E8E12B6A89F3004FE999 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E52E8DF2B6A89F3004FE999 /* LaunchScreen.storyboard */; };
+		4E52E8E92B6A9253004FE999 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E52E8E82B6A9253004FE999 /* Constants.swift */; };
+		4E52E8F12B6A9455004FE999 /* WorkoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E52E8F02B6A9455004FE999 /* WorkoutVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		4E52E8DD2B6A89F3004FE999 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E52E8E02B6A89F3004FE999 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E52E8E22B6A89F3004FE999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E52E8E82B6A9253004FE999 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4E52E8F02B6A9455004FE999 /* WorkoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				4E52E8DF2B6A89F3004FE999 /* LaunchScreen.storyboard */,
 				4E52E8E22B6A89F3004FE999 /* Info.plist */,
 				4E52E8DA2B6A89E0004FE999 /* Work_It_Out.xcdatamodeld */,
+				4E52E8E82B6A9253004FE999 /* Constants.swift */,
+				4E52E8F02B6A9455004FE999 /* WorkoutVC.swift */,
 			);
 			path = "Work It Out";
 			sourceTree = "<group>";
@@ -141,9 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E52E8E92B6A9253004FE999 /* Constants.swift in Sources */,
 				4E52E8D62B6A89E0004FE999 /* ViewController.swift in Sources */,
 				4E52E8D22B6A89E0004FE999 /* AppDelegate.swift in Sources */,
 				4E52E8DC2B6A89E0004FE999 /* Work_It_Out.xcdatamodeld in Sources */,
+				4E52E8F12B6A9455004FE999 /* WorkoutVC.swift in Sources */,
 				4E52E8D42B6A89E0004FE999 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
